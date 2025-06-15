@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.postimg.cc/SK9FxRv4/494690533-1353691075865260-8165279972410060628-n.jpg" type="image/x-icon" />
+  <title>Cateye Nails | Μανικιούρ & Πεντικιούρ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradient 20s ease infinite;
+      color: #333;
+    }
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header {
+      background-color: rgba(255,255,255,0.9);
+      padding: 5px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 60px;
+    }
+    h1 {
+      font-size: 1.5em;
+      margin-top: 5px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .welcome {
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .scroll-container {
+      overflow: hidden;
+      position: relative;
+    }
+    .services {
+      display: flex;
+      gap: 20px;
+      animation: scroll 60s linear infinite;
+    }
+    @keyframes scroll {
+      0% {transform: translateX(0);}
+      100% {transform: translateX(-100%);}
+    }
+    .service {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      min-width: 250px;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .service:hover {
+      transform: scale(1.05);
+    }
+    .service h3 {
+      margin: 10px 0 5px;
+    }
+    .service i {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #a18cd1;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .popup-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button {
+      background-color: #8fd3f4;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #84fab0;
+    }
+    .close-btn {
+      background-color: #ff6b6b;
+      color: white;
+    }
+    .price-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .price-column {
+      flex: 1 1 30%;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 10px;
+    }
+    .price-column h4 {
+      margin-top: 0;
+    }
+    footer {
+      background-color: rgba(255,255,255,0.9);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+    .phone-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 25px;
+      font-size: 1.1em;
+      background-color: #a18cd1;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .phone-btn:hover {
+      background-color: #845ec2;
+    }
+
+    .gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.gallery img {
+  flex: 0 0 auto;
+  max-height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+<center>
+  <header>
+    <img src="https://i.postimg.cc/SK9FxRv4/494690533-1353691075865260-8165279972410060628-n.jpg" alt="Cateye Nails Logo">
+    <h1>Cateye Nails</h1>
+    <p style="margin: 5px 0; font-size: 0.9em;">Μανικιούρ & Πεντικιούρ - Ομορφιά και Περιποίηση</p>
+    <nav>
+      <a href="#welcome">Αρχική</a>
+      <a href="#services">Υπηρεσίες</a>
+      <a href="#gallery">Φωτογραφίες</a>
+      <a href="#prices">Τιμοκατάλογος</a>
+      <a href="#appointment">Ραντεβού</a>
+    </nav>
+  </header>
+
+  <section id="welcome">
+    <div class="welcome">
+      <h2>Καλωσορίσατε στο Cateye Nails!</h2>
+      <p>Η ομορφιά ξεκινά από τα άκρα – και εμείς είμαστε εδώ για να σας προσφέρουμε την απόλυτη εμπειρία περιποίησης. Στο Cateye Nails, σας περιμένει ένας μοντέρνος και φιλόξενος χώρος για να χαλαρώσετε και να ανανεώσετε την εμφάνισή σας. Επιλέξτε την υπηρεσία που σας ταιριάζει και απολαύστε την φροντίδα που σας αξίζει!</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Οι Υπηρεσίες μας</h2>
+    <div class="scroll-container">
+      <div class="services">
+        <div class="service"><i class="fas fa-hand-sparkles"></i><h3>Μανικιούρ</h3><p>Περιποίηση και διαμόρφωση νυχιών με βάψιμο ή χωρίς.</p></div>
+        <div class="service"><i class="fas fa-footprints"></i><h3>Πεντικιούρ</h3><p>Αναζωογόνηση ποδιών και νυχιών με φροντίδα και βάψιμο.</p></div>
+        <div class="service"><i class="fas fa-heart"></i><h3>Θεραπεία</h3><p>Εξειδικευμένες θεραπείες για υγιή και δυνατά νύχια.</p></div>
+        <div class="service"><i class="fas fa-sync-alt"></i><h3>Συντήρηση</h3><p>Επιδιόρθωση ή φρεσκάρισμα νυχιών μεταξύ των ραντεβού.</p></div>
+        <div class="service"><i class="fas fa-brush"></i><h3>Απλό Μανικιούρ</h3><p>Κλασική περιποίηση νυχιών και μονόχρωμο βερνίκι.</p></div>
+        <div class="service"><i class="fas fa-star-half-alt"></i><h3>Ενισχυμένο Ημιμόνιμο</h3><p>Ημιμόνιμο με έξτρα βάση για μεγαλύτερη διάρκεια.</p></div>
+        <div class="service"><i class="fas fa-magic"></i><h3>Ημιμόνιμο</h3><p>Μακράς διάρκειας βάψιμο με λαμπερό αποτέλεσμα.</p></div>
+        <div class="service"><i class="fas fa-gem"></i><h3>Ακρυλικό</h3><p>Δημιουργία νυχιών με ακρυλική πούδρα για αντοχή.</p></div>
+        <div class="service"><i class="fas fa-glass-martini-alt"></i><h3>Gel</h3><p>Φυσικό αποτέλεσμα με gel που πολυμερίζεται με UV.</p></div>
+        <div class="service"><i class="fas fa-layer-group"></i><h3>Acrygel</h3><p>Συνδυασμός gel και ακρυλικού για δυνατό και ελαφρύ αποτέλεσμα.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Φωτογραφίες</h2>
+   <div class="gallery">
+      <img src="https://i.postimg.cc/wjZzJbWp/Screenshot-15-6-2025-121656-www-instagram-com.jpg" alt="Nail Art 1">
+      <img src="https://i.postimg.cc/pTYMwVPW/Screenshot-15-6-2025-12166-www-instagram-com.jpg" alt="Nail Art 2">
+      <img src="https://i.postimg.cc/50MMKQdK/Screenshot-15-6-2025-121730-www-instagram-com.jpg" alt="Nail Art 3">
+      <img src="https://i.postimg.cc/cLrZvNBh/Screenshot-15-6-2025-121758-www-instagram-com.jpg" alt="Nail Art 4">
+      <img src="https://i.postimg.cc/LsPpVB7Z/Screenshot-15-6-2025-121843-www-instagram-com.jpg" alt="Nail Art 4">
+      <img src="https://i.postimg.cc/8PkTVvFq/Screenshot-15-6-2025-121959-www-instagram-com.jpg" alt="Nail Art 4">
+    </div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <h2>Τιμοκατάλογος</h2>
+    <div class="price-list">
+      <div class="price-column">
+        <h4>Μανικιούρ</h4>
+        <p>Ημιμόνιμο: 15€</p>
+        <p>Ενισχυμένο Ημιμόνιμο: 18€</p>
+      </div>
+      <div class="price-column">
+        <h4>Πεντικιούρ</h4>
+        <p>Ημιμόνιμο Πεντικιούρ: 15€</p>
+        <p>Spa Πεντικιούρ: 25€</p>
+      </div>
+      <div class="price-column">
+        <h4>Ειδικές Υπηρεσίες</h4>
+        <p>Ακρυλικό: 30€</p>
+        <p>Gel: 30€</p>
+        <p>Acrygel: 28€</p>
+        <p>Συντήρηση: 25€</p>
+        <p>Θεραπεία: 20€</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="appointment" style="text-align:center">
+    <h2>Κλείσε Ραντεβού</h2>
+    <button onclick="document.getElementById('popup').style.display='flex'">Κλείσε Ραντεβού</button>
+    <br>
+    <a href="tel:+306972498640" class="phone-btn">Καλέστε μας 📞 +306972498640</a>
+  </section>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Φόρμα Ραντεβού</h2>
+<form action="https://formsubmit.co/hunajo" method="POST">
+     <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+     <input type="text" name="Email" class="form-control" placeholder="Email" required>
+     <input type="text" name="Τηλέφωνο" class="form-control" placeholder="Τηλέφωνο" required>
+     <input type="text" name="Ημερομηνία" class="form-control" placeholder="Ημερομηνία" required>
+     <input type="text" name="Ώρα" class="form-control" placeholder="Ώρα" required>
+     <input type="text" name="Υπηρεσία" class="form-control" placeholder="Υπηρεσία" required>
+     <input type="text" name="Σχόλια" class="form-control" placeholder="Σχόλια" required>
+
+     <button type="submit">Κλείσε Ραντεβού</button>
+</form>
+
+  <footer>
+    <p>Με εκτίμηση, Cateye Nails | 📍 Καμένα Βούρλα | ☎️ +306972498640 | 📧 cateyenailsaloon@gmail.com </p>
+    <p>
+      Ακολουθήστε μας:
+      <a href="https://www.facebook.com/profile.php?id=61568870591865"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/cateyenailsaloon/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@cateye.nail.saloo"><i class="fab fa-tiktok"></i></a>
+    </p>
+  </footer>
+</body>
+</html>
